@@ -23,6 +23,8 @@ def summary():
 
     print('\nSummary for ' + city + ' in ' + month + '/' + year)
 
-    print(f'\nMax Temp: {data[0].text}\nMin Temp: {data[3].text}\nAvg Temp: {data[6].text}\n')
+    print(f'\nMax Temperature: {data[0].text}\nMax Humidity: {data[1].text}\nMax Pressure: {data[2].text}\n')
+    print(f'\nMin Temperature: {data[3].text}\nMin Humidity: {data[4].text}\nMin Pressure: {data[5].text}\n')
+    print(f'\nAvg Temperature: {data[6].text}\nAvg Humidity: {data[7].text}\nAvg Pressure: {data[8].text}\n')
 
     input('\nPress Enter to Continue...')
