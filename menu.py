@@ -1,10 +1,10 @@
-menu_items = ['1. Monthly Summary']
+menu_items = ['1. Monthly Summary', '2. Yearly Summary']
 
 # Ask user for option, then return it
 def get_option():
     option = ''
 
-    print('wHistory (pronounced WI-stə-ree)')
+    print('wHistory (pronounced WI-st\u01dd-ree)')
     print('All data belongs to CustomWeather\n\n')
 
     for item in menu_items:

@@ -1,6 +1,6 @@
-import scrape
 import menu
 import monthly
+import yearly
 
 # Main loop
 while True:
@@ -8,5 +8,7 @@ while True:
 
     if option == 1:
         monthly.summary()
+    elif option == 2:
+        yearly.summary()
     else:
         break
