@@ -1,4 +1,4 @@
-menu_items = ['1. Monthly Summary', '2. Yearly Summary']
+menu_items = ['1. Monthly Summary', '2. Yearly Summary', '3. Monthly Rank']
 
 # Ask user for option, then return it
 def get_option():

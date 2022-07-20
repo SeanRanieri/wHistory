@@ -10,5 +10,7 @@ while True:
         monthly.summary()
     elif option == 2:
         yearly.summary()
+    elif option == 3:
+        monthly.rank()
     else:
         break
