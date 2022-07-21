@@ -9,10 +9,15 @@ def request_month(city, year, month):
 # Check if data exists at a certain month and year
 def data_exists(city, year, month):
     soup = request_month(city, str(year), str(month))
-    header = soup.find_all(class_='headline-banner__title')[0].text
-    if '2 Weeks' in header:
+    header = soup.find_all(class_='headline-banner__title')
+
+    if not header:
         return False
-    return True
+    else:
+        h_text = header[0].text
+        if ('2 Weeks' in h_text) or ('Unknown' in h_text):
+            return False
+        return True
 
 # Count number of digits in reading
 def count_nums(str):

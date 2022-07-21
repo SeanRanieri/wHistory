@@ -17,23 +17,20 @@ def summary():
 
 
     if not scrape.data_exists(city, year, month):
-        print('Data does not exist for this month. Please try a different month.\n')
+        print('\nData does not exist. Please try a different city or month.\n')
 
     else:
         # Call request function in scrape.py module
         soup = scrape.request_month(city, year, month)
-
         table = soup.find('div', class_='dashb')
 
         data = table.find_all('td')
-
         print('\nSummary for ' + city + ' in ' + month + '/' + year)
-
         print(f'\nMax Temperature: {data[0].text}\nMax Humidity: {data[1].text}\nMax Pressure: {data[2].text}\n')
         print(f'\nMin Temperature: {data[3].text}\nMin Humidity: {data[4].text}\nMin Pressure: {data[5].text}\n')
         print(f'\nAvg Temperature: {data[6].text}\nAvg Humidity: {data[7].text}\nAvg Pressure: {data[8].text}\n')
 
-        input('\nPress Enter to Continue...')
+    input('\nPress Enter to Continue...')
 
 def rank():
     city = ''
